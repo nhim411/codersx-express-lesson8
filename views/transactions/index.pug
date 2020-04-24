@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title codersX
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+
+h1 Transactions
+
+a(href="/transactions/create") Create transaction
+br
+a(href="/") Home
+
+table(class="table table-bordered")
+  tr
+    th User ID
+    th Book ID
+  each transaction in transactions
+    tr
+      td= transaction.userId
+      td= transaction.bookId
+    
+    
+      
+      

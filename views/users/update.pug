@@ -1,0 +1,16 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title codersX
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  
+h1 update new name for User'name: #{user.name}
+
+form(action='/users/update/'+user.id, method="POST")
+  label title:&nbsp;
+  input(type="text", name="name")
+  span &nbsp;
+  span &nbsp;
+  button Update
+  br
+  a(href='/users') Go to /users
