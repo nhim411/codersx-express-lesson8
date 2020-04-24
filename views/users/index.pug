@@ -1,0 +1,28 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title codersX
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  
+h1 Users Manager
+hr
+form(action="/user",method="GET")
+  input(type="text", name="q")
+  button Search
+ul
+  each user in users
+    li
+      span= user.name
+      span &nbsp;
+      a(href='/users/update/'+user.id) update
+      span &nbsp;
+      a(href='/users/delete/'+user.id) delete
+hr
+h4 Add new user
+form(action="/users/create", method="POST")
+  label title:&nbsp;
+  input(type="text", name="name")
+  span &nbsp;
+  button Create
+      
+  
